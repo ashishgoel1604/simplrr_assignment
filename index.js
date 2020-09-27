@@ -5,7 +5,22 @@ const businessSearchUrl = `${helper.baseUrl}v3/businesses/search?location=Redwoo
 //this function will return the final response
 const getTopTenIceCreamShops = async function () {
     let finalResults = [];
-    //first getting top 10 businesses.
-    const result = await helper.makeHttpGetRequest(businessSearchUrl);
-    
+    try {
+        //first getting top 10 businesses.
+        const result = await helper.makeHttpGetRequest(businessSearchUrl);
+        if (result && result.businesses && result.businesses.length) {
+            //for each business id, getting its reviews. [this api have a limit for request per second, so making requests one by one
+            //(i could have used Promise.all, but to keep the code straight, i am calling apis one by one)]
+            for (business of result.businesses) {
+                const reviewUrl = `https://api.yelp.com/v3/businesses/${business.businessId}/reviews`;
+                const reviewData = await helper.makeHttpGetRequest(reviewUrl);
+            }
+        } else {
+            throw new Error('No data found');
+        }
+    } catch (err) {
+        console.log(err);
+        return null;
+    }
+
 }

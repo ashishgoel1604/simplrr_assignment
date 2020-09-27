@@ -1,0 +1,22 @@
+{
+  "name": "simplrr",
+  "version": "1.0.0",
+  "description": "assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashishgoel1604/simplrr_assignment.git"
+  },
+  "keywords": [
+    "assignment"
+  ],
+  "author": "Ashish Goel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashishgoel1604/simplrr_assignment/issues"
+  },
+  "homepage": "https://github.com/ashishgoel1604/simplrr_assignment#readme"
+}

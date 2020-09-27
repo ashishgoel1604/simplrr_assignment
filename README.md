@@ -11,3 +11,6 @@ Steps followed >
 4. For getting reviews, made use of Promise.All() for parallel requests, but yelp api has a limitation on requests per second, So for this, used for loop, to make requests in batches of 5 requests.
 5. fillnally after getting responses from apis, created objects as per required response. [For this purpose, i have written seprate functions].
 
+6. To test this code, Run Index.js using 'node' command. [Response can be seen in console as of now.]
+
+7. Screen recording video link >> https://www.loom.com/share/04ee6c5c4ff14de99da1e827e0c6f34b

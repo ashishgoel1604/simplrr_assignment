@@ -1,4 +1,4 @@
-const https = require('http');
+const https = require('https');
 const baseUrl = 'https://api.yelp.com/';
 //Assuming that, i have to make only one type of request, so hardcoding headers
 const headers = {
